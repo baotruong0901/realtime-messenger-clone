@@ -78,6 +78,7 @@ const MessageBox = ({ data, isLast }: MessageBoxProps) => {
                 <div className="flex gap-x-[2px] max-w-xs flex-wrap">
                     {isLast && isOwn && seenList.length > 0 && seenList.map((seen) => (
                         <Image
+                            key={seen}
                             src={seen || '/images/placeholder.jpg'}
                             alt="image sender"
                             className="object-contain rounded-full"

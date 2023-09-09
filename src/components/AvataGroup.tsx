@@ -19,7 +19,9 @@ const AvatarGroup = ({ users }: AvatarGroupProps) => {
         <div className="relative">
             <div className="relative h-11 w-11">
                 {sliceUsers?.map((user, index) => (
-                    <div className={`absolute inline-block rounded-full overflow-hidden h-[22px] w-[22px] ${positionMap[index as keyof typeof positionMap]}`}>
+                    <div
+                        key={user.id}
+                        className={`absolute inline-block rounded-full overflow-hidden h-[22px] w-[22px] ${positionMap[index as keyof typeof positionMap]}`}>
                         <Image
                             alt="Avatar"
                             fill

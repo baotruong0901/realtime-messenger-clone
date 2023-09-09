@@ -132,7 +132,12 @@ const ProfileDrawer = ({ data, isOpen, onClose }: ProfileDrawerProps) => {
                                                                         </dt>
                                                                         <dd className="mt-1 flex flex-col gap-1 sm:col-span-2">
                                                                             {data.users.map((user) => (
-                                                                                <div className="text-sm text-gray-900">{user.email}</div>
+                                                                                <div
+                                                                                    key={user.email}
+                                                                                    className="text-sm text-gray-900"
+                                                                                >
+                                                                                    {user.email}
+                                                                                </div>
                                                                             ))}
                                                                         </dd>
                                                                     </div>
